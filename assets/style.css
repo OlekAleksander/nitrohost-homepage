@@ -12,7 +12,8 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     background-color: var(--background);
-    color: var(--text)
+    color: var(--text);
+    margin:0px;
 }
 
 .btn {
