@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 :root{
     --primary: #ff79c6;
     --secondary: #bd93f9;
     --text: #ffffff;
     --background: #282a36;
     --background-accent:#44475a;
+}
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
 }
 .btn{
     border-radius: 16px;
@@ -14,4 +19,11 @@
 }
 .btn-primary{
     background-color: var(--primary);
+}
+.btn-outline-primary{
+    background-color:transparent;
+    border:2px var(--primary) solid;
+}
+.btn-outline-primary:hover{
+    background-color:var(--primary);
 }
