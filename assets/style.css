@@ -105,8 +105,9 @@ a{
 }
 .card{
     background-color: var(--background);
-    width:80px;
+    width:120px;
     height:160px;
+    border-radius:12px;
 }
 .title{
     font-size:28px;
