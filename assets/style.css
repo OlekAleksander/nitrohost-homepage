@@ -27,3 +27,7 @@ body{
 .btn-outline-primary:hover{
     background-color:var(--primary);
 }
+.btn:focus{
+    border: 2px --primary;
+    border-spacing: 6px;
+}
