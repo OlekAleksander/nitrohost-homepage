@@ -1,3 +1,14 @@
+:root{
+    --primary: #ff79c6;
+    --secondary: #bd93f9;
+    --text: #ffffff;
+    --background: #282a36;
+    --background-accent:#44475a;
+}
 .btn{
     border-radius: 16px;
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: var(--primary);
 }
