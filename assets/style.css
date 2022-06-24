@@ -123,6 +123,7 @@ i{
     display:flex;
     flex-direction: row;
     gap:20px;
+    align-items: center;
     justify-content: center;
 }
 ul{
@@ -134,5 +135,7 @@ ul{
         display:flex;
         flex-direction: column;
         gap:20px;
+        align-items: center;
+        justify-content: center
     }
 }
