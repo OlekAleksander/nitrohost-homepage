@@ -31,6 +31,9 @@ body {
 .btn-outline-primary {
     background-color: transparent;
     border: 2px var(--primary) solid;
+    padding: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .btn-outline-primary:hover {
