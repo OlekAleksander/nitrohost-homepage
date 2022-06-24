@@ -105,9 +105,13 @@ a{
 }
 .card{
     background-color: var(--background);
-    width:130px;
-    height:160px;
+    width:140px;
+    height:170px;
     border-radius:12px;
+    transition: 0.2s ease;
+}
+.card:hover{
+    transform:scale(1.1,1.1)
 }
 .title{
     font-size:28px;
