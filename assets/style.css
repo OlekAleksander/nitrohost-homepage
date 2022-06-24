@@ -37,6 +37,9 @@ body {
     background-color: var(--primary);
 }
 
+.btn-dark{
+    background:var(--background)
+}
 a, a:visited {
     color: white;
 }
