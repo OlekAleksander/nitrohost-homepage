@@ -49,6 +49,9 @@ a, a:visited {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    left:50%;
+    right:50%;
+    transform:posX(-50%)
 }
 
 @media (min-width: 768px) {
