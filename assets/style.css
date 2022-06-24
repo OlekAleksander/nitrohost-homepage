@@ -68,3 +68,6 @@ a, a:visited {
         width: 1170px;
     }
 }
+.wave{
+    background:var(--primary)
+}
