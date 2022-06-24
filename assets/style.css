@@ -92,3 +92,10 @@ h1{
 .tagline{
     margin-top:-25px;
 }
+footer{
+    background: var(--background-accent);
+    padding-top:15px;
+    padding-bottom:15px;
+    width:100%;
+    text-align: center;
+}
