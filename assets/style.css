@@ -29,3 +29,6 @@ body{
 .btn-outline-primary:hover{
     background-color:var(--primary);
 }
+a, a:visited{
+    color:white;
+}
