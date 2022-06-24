@@ -79,6 +79,7 @@ a, a:visited {
     background-color:var(--primary);
     margin-top:-45px;
     width:100%;
+    text-align: center;
 }
 .full-width{
     width:100%!important;
@@ -98,4 +99,12 @@ footer{
     padding-bottom:15px;
     width:100%;
     text-align: center;
+}
+a{
+    text-decoration: nones;
+}
+.card{
+    background-color: var(--background);
+    width:80px;
+    height:160px;
 }
