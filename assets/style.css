@@ -69,5 +69,8 @@ a, a:visited {
     }
 }
 .wave{
-    background:var(--primary)
+    background-color:var(--primary);
+}
+.full-width{
+    width:100%!important;
 }
