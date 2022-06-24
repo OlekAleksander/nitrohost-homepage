@@ -8,6 +8,9 @@
 .btn{
     border-radius: 16px;
     text-decoration: none;
+    padding:14px;
+    padding-top:6px;
+    padding-bottom:6px;
 }
 .btn-primary{
     background-color: var(--primary);
