@@ -9,6 +9,7 @@
 body{
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
+    background-color: var(--background);
 }
 .btn{
     border-radius: 16px;
