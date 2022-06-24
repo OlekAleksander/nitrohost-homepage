@@ -77,7 +77,7 @@ a, a:visited {
 }
 .wave{
     background-color:var(--primary);
-    margin-top:-35px;
+    margin-top:-45px;
     width:100%;
 }
 .full-width{
