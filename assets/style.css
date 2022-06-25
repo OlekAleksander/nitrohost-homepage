@@ -195,9 +195,6 @@ ul {
     color: #efefef;
 }
 
-.nav>.nav-links>a:hover {
-    background-color: var(--background);
-}
 
 .nav>#nav-check {
     display: none;
