@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 :root {
-    --primary: #ff79c6;
+    --primary: #9522e2;
     --secondary: #bd93f9;
     --text: #ffffff;
     --background: #282a36;
@@ -138,4 +138,8 @@ ul{
         align-items: center;
         justify-content: center
     }
+}
+.free{
+    display:inline-block;
+    height:140px
 }
