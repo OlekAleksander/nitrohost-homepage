@@ -159,12 +159,14 @@ ul {
     display: inline-block;
     height: 140px
 }
-
+nav{
+    position: sticky;
+}
 .nav {
     height: 50px;
     width: 100%;
     background-color: var(--background);
-    position: relative;
+    position: sticky;
 }
 
 .nav>.nav-header {
@@ -252,4 +254,8 @@ ul {
         height: calc(100vh - 50px);
         overflow-y: auto;
     }
+}
+#nav-btn{
+    padding-bottom:3px;
+    padding-top:3px;
 }
