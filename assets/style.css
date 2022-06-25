@@ -163,7 +163,7 @@ ul {
 .nav {
     height: 50px;
     width: 100%;
-    background-color: var(--background-accent);
+    background-color: var(--background);
     position: relative;
 }
 
