@@ -1,108 +1,163 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NitroHost</title>
-    <link href="/assets/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            setTimeout(function(){
+                var replacers = document.querySelectorAll('[data-replace]');
+                for(var i=0; i<replacers.length; i++){
+                    let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+                    Object.keys(replaceClasses).forEach(function(key) {
+                        replacers[i].classList.remove(key);
+                        replacers[i].classList.add(replaceClasses[key]);
+                    });
+                }
+            }, 1);
+        });
+    </script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<body class="antialiased">
+<section class="w-full px-6 pb-12 antialiased" data-tails-scripts="//unpkg.com/alpinejs" >
+    <div class="mx-auto max-w-7xl">
 
-<body>
-    <nav>
-        <div class="nav">
-            <input type="checkbox" id="nav-check">
-            <div class="nav-header">
-              <div class="nav-title">
-                NitroHost
-              </div>
-            </div>
-            <div class="nav-btn">
-              <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-              </label>
-            </div>
-            
-            <div class="nav-links">
-              <a href="/">Home</a>
-              <a href="https://nitrohost.cf/documents/privacy_policy.html">Privacy Policy</a>
-              <a href="https://nitrohost.cf/documents/tos.html">Terms of Service</a>
-              <a href="https://nitrohost.cf/discord.html" target="_blank">Discord</a>
-              <a class="btn btn-outline-primary" id="nav-btn" href="https://panel.nitrohost.cf" target="_blank">Panel</a>
-            </div>
-          </div>
-    </nav>
-    <header>
-        <div class="container">
-            <h1>NitroHost</h1>
-            <h3 class="tagline">Powerful server hosting service</h3><a href="#section2" class="btn btn-primary">Learn
-                more</a>&nbsp;<a href="https://panel.nitrohost.cf" class="btn btn-outline-primary">Panel</a>
-        </div>
-    </header>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#9522e2" fill-opacity="1"
-            d="M0,32L48,58.7C96,85,192,139,288,149.3C384,160,480,128,576,101.3C672,75,768,53,864,48C960,43,1056,53,1152,74.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-        </path>
-    </svg>
-    <div class="wave">
-        <div class="container">
-            <section id="section2">
-                <h2>Why us?</h2>
-                <h3 class="tagline">These are the reasons why we are better than most</h3>
-                <br>
-                <div class="cards">
-                    <div class="card">
-                        <p><i class="fa-solid fa-bolt"></i><br><b class="title">Fast</b><br>We give you the best
-                            performace possible</p>
-                    </div>
-                    <div class="card">
-                        <p><i class="fa-solid fa-face-smile"></i><br><b class="title">Easy</b><br>The deployment
-                            process cant be easier than ours</p>
-                    </div>
-                    <div class="card">
-                        <p><i class="fa-solid fa-money-bill"></i><br><b class="title">Free</b><br>We have a free
-                            plan. Read about it <a href="#section3">here</a></p>
-                    </div>
+        <nav class="relative z-99 h-24 select-none">
+            <div class="relative flex flex-wrap items-center justify-between h-16 mx-auto overflow-hidden font-medium md:overflow-visible lg:justify-center sm:px-4 md:px-2 lg:px-0">
+                <div class="flex items-center justify-start w-1/4 h-full pr-4">
+                    <a href="#" class="inline-block py-4 md:py-0">
+                        <span class="p-1 text-xl font-black leading-none text-purple-500">NitroHost</span>
+                    </a>
                 </div>
-            </section>
-            <br><br>
-            <section id="section3">
-                <h2>Free plan</h2>
-                <h3 class="tagline">We provide a free plan wich includes</h3>
-                <div class="card free">
-                <ul>
-                    <li>1.5gb of ram</li>
-                    <li>5gb of storage</li>
-                    <li>1 cpu thread</li>
-                    <li>1 database</li>
-                    <li>2 allocations</li>
-                </ul>
+                <div class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 lg:text-base md:bg-transparent md:p-0 md:relative md:flex" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
+                    <div class="flex-col w-full h-auto overflow-hidden bg-stone-700 rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
+                        <div class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
+                            <a href="#" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-purple-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
+                            <a href="#features" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-purple-600 lg:mx-3 md:text-center">Features</a>
+                            <a href="discord.html" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-purple-600 lg:mx-3 md:text-center">Discord</a>
+                        </div>
+                        <div class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
+                            <a href="https://panel.nitrohost.cf/" class="inline-flex items-center w-full px-6 py-3 text-sm font-medium leading-4 text-white bg-purple-600 md:px-3 md:w-auto md:rounded-md lg:px-12 hover:bg-purple-500 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-purple-600">Panel</a>
+                        </div>
+                    </div>
+                </div>                        
+                <div class="absolute right-0 flex flex-col items-end justify-center w-10 h-10 bg-white rounded-md cursor-pointer md:hidden hover:bg-gray-100">
+                    <a href="https://panel.nitrohost.cf/" class="inline-flex items-center justify-center w-full mr-2 px-2 py-2 text-base font-bold leading-6 text-white bg-purple-600 border border-transparent rounded-md md:w-auto hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <br><br>
-                <a href="https://panel.nitrohost.cf/auth/register" class="btn btn-dark">Create an account</a>
-            </section>
+            </div>
+        </nav>
+
+        <div class="container max-w-lg px-4 py-32 mx-auto mt-px text-left md:max-w-none md:text-center">
+            <h1 class="text-5xl font-extrabold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:leading-none md:text-6xl lg:text-7xl duration-700 relative transform opacity-0 transition-all translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'><span class="inline md:block">Host your projects</span> <span class="relative mt-2 text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-purple-500 md:inline-block">FOR FREE</span></h1>
+            <div class="mx-auto mt-5 text-gray-500 md:mt-12 md:max-w-lg md:text-center lg:text-lg  duration-700 relative transform opacity-0 transition-all translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>NitroHost is a freemium hosting service wich allows you to host a website, discord bot, game server 24/7</div>
+            <div class="flex flex-col items-center mt-12 text-center">
+                <a href="https://panel.nitrohost.cf" type="button" class="inline-flex items-center justify-center w-full px-48 py-2 text-base font-bold leading-6 text-white bg-purple-600 border border-transparent rounded-md md:w-auto hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600  duration-700 relative transform opacity-0 transition-all translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>Panel</a>
+                <a href="#features" type="button" class="fa-solid fa-angle-down py-2 px-8 rounded-md text-purple-500 mt-44 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 animate-bounce"></a>
+            </div>
         </div>
-        <br><br>
+
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#9522e2" fill-opacity="1"
-            d="M0,288L60,282.7C120,277,240,267,360,229.3C480,192,600,128,720,138.7C840,149,960,235,1080,245.3C1200,256,1320,192,1380,160L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-        </path>
-    </svg>
+</section>
+
+<section id="features" class=" py-18">
+    <div class="container max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold tracking-tight text-center">Features</h2>
+        <p class="mt-2 text-2xl text-center text-gray-600">These are the reasons why you should choose us!</p>
+        <div class="grid grid-cols-4 gap-6 mt-12 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
+
+            <div class="relative flex flex-col shadow-lg border border-gray-100 items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden sm:rounded-xl hover:shadow-xl duration-300">
+                <div class="p-3 text-white bg-purple-500 rounded-md">
+                    <i class="fa-solid fa-chart-bar"></i>
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Uptime</h4>
+                <p class="text-base text-center text-gray-500">We provide 24/7 hosting without lag, all of this for <span class="text-purple-500 font-bold">free</span></p>
+            </div>
+
+            <div class="flex flex-col items-center shadow-lg border border-gray-100 justify-between col-span-4 px-8 py-12 space-y-4 sm:rounded-xl hover:shadow-xl duration-300">
+                <div class="p-3 text-white bg-purple-500 rounded-md">
+                    <i class="fa-solid fa-money-bill-1-wave"></i>
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Free Plan</h4>
+                <p class="text-base text-center text-gray-500">Our Free Plan contains 1gb of shared ram, 5gb of storage space and 1 cpu thread.</p>
+            </div>
+
+            <div class="flex flex-col items-center shadow-lg border border-gray-100 justify-between col-span-4 px-8 py-12 space-y-4 sm:rounded-xl hover:shadow-xl duration-300">
+                <div class="p-3 text-white bg-purple-500 rounded-md">
+                    <i class="fa-solid fa-upload"></i>
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Deployment</h4>
+                <p class="text-base text-center text-gray-500">With our high quality panel deployment is very <span class="text-purple-500 font-bold">easy</span>.</p>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <section href="section3">
-            <h2>Need support?</h2>
-            <h3 class="tagline">Contact us on our discord</h3>
-            <a href="https://nitrohost.cf/discord.html" class="btn btn-primary">Discord</a>
-        </section>
-    </div><br><br><br><br>
-    <footer>© 2022 <a href="https://olekaleksander.pl">OlekAleksander</a></footer>
+</section>
+
+<section class="py-12 sm:py-16 bg-white">
+    <div class="max-w-7xl px-10 mx-auto sm:text-center">
+        <h2 class="font-bold text-3xl sm:text-4xl lg:text-5xl mt-3">Supported Languages/Software</h2>
+        <p class="mt-4 text-gray-500 text-base sm:text-xl lg:text-2xl">Deploy your favourite programming languages/software</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 my-12 sm:my-16">
+            <div class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 hover:shadow-xl duration-300">
+                <img class="w-16 h-auto" src="https://www.python.org/static/opengraph-icon-200x200.png" alt="Python">
+                <p class="font-bold mt-4">Python</p>
+                <p class="mt-2 text-sm text-gray-500">Host your bots/websites/p>
+            </div>
+            <div class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 hover:shadow-xl duration-300">
+                <img class="w-16 h-auto" src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="java">
+                <p class="font-bold mt-4">Java</p>
+                <p class="mt-2 text-sm text-gray-500">Host your gameservers/bots</p>
+            </div>
+            <div class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 hover:shadow-xl duration-300l">
+                <img class="w-16 h-auto" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="php">
+                <p class="font-bold mt-4">NodeJS</p>
+                <p class="mt-2 text-sm text-gray-500">Host your bots/websites</p>
+            </div>
+            <div class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 hover:shadow-xl duration-300">
+                <img class="w-16 h-auto" src="https://www.php.net/images/logos/new-php-logo.png" alt="php">
+                <p class="font-bold mt-4">NGINX</p>
+                <p class="mt-2 text-sm text-gray-500">Host your html/php websites</p>
+            </div>
+        </div>
+        <a href="https://panel.nitrohost.cf/auth/register" class="inline-flex items-center justify-center w-full px-16 py-2 text-base font-bold leading-6 text-white bg-purple-600 border border-transparent rounded-md md:w-auto hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600">Create an account</a>
     </div>
+</section>
+
+
+<section class="bg-zinc-700">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <nav class="flex flex-wrap justify-center text-center">
+            <div class="px-5 py-2">
+                <a href="/discord.html" class="text-base leading-6 text-gray-600 hover:text-purple-600">
+                    Discord
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="/documents/privacy_policy.html" class="text-base leading-6 text-gray-600 hover:text-purple-600">
+                    Privacy Policy
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="/documents/tos.html" class="text-base leading-6 text-gray-600 hover:text-purple-600">
+                    Terms of service
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="/documents/rules.html" class="text-base leading-6 text-gray-600 hover:text-purple-600">
+                    Rules
+                </a>
+            </div>
+        </nav>
+        <p class="mt-8 text-base leading-6 text-center text-gray-600">© 2022 <a class="text-gray-500 hover:text-purple-600" href="https://olekaleksander.pl">OlekAleksander</a></p>
+    </div>
+</section>
 </body>
-
 </html>
